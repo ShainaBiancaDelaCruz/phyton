@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="container flex">
+            <h1>SB SPA</h1>
+            <nav>
+                <ul>
+                  <li><a href="{{ url_for('index')}}" class="nav-link">Home</a></li>
+                    <li><a href="{{ url_for('booked')}}" class="nav-link">Booked Appointments</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+     <!-- Sub head -->
+     <section class="sub-head bg-secondary py-3">
+        <div class="container grid">
+            <div>
+                <h1 class="welcome">WELCOME ADMIN!</h1>
+                <a href="{{ url_for('appointment')}}" >
+                    <button class="c-button">
+                        <span class="c-main">
+                          <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+                          Create Appointment
+                        </span>
+                      </button>
+                    </a>
+            </div>
+            <img src="{{url_for('static', filename='img/dentist.png')}}" />
+        </div>
+    </section>
+</body>
+</html>
